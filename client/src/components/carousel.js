@@ -1,4 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
+import "./carousel.css";
 
 function CarouselFadeExample() {
   return (
