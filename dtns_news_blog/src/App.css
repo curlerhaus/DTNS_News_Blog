@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.carousel {
+  width:auto;
+  height: 360px;
+  background-color: gray;
+} 
+
+.slider-container {
+  width: auto;
+  height: 360px;
+  position:center;
+  top:0;
+  left:0;
+  }
