@@ -1,21 +1,25 @@
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import React from 'react'
+import SignUp from './components/signUp';
+import Select from './components/select'
+import Login from './components/login';
+import TopNavBar from './components/topnavbar'
 
-import './App.css';
 
-import Home from './components/Home'
-import About from './components/About'
-import Contact from './components/Contact'
-import Search from './components/Search';
-import Card from './components/Card'
-import NavBar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <div>
+      <TopNavBar />
+      {/* <SignUp /> */}
+      {/* <Select /> */}
+      {/* <Login /> */}
+
     </div>
   );
 }
 
-export default App;
+
+
+
+export default App
+
