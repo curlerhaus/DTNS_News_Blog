@@ -1,12 +1,21 @@
-import './App.css';
 import React from 'react'
+import SignUp from './components/signUp';
+import Select from './components/select'
+import Login from './components/login';
+
+
 
 function App() {
   return (
     <div>
-      <h1>Helllloooo World</h1>
+      <SignUp />
+      {/* <Select /> */}
+      {/* <Login /> */}
     </div>
   )
 }
 
+
+
 export default App
+
