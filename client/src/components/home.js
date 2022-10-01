@@ -2,6 +2,7 @@ import "./home.css";
 import CarouselFadeExample from "../components/carousel";
 import CardTemplate from "../components/cards";
 import Footer from "../components/footer";
+import TopNavBar from "./topnavbar";
 
 function Home() {
   return (
@@ -10,7 +11,7 @@ function Home() {
         <img className="logo" src="./logo/logo-black.png" alt="DTNS Logo"></img>
         <h1>Your Worst Place for News</h1>
       </div>
-
+      <TopNavBar />
       <CarouselFadeExample />
       <CardTemplate />
       <Footer />
