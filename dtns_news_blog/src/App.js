@@ -1,6 +1,7 @@
 import CardTemplate from ".//components/cards";
 import "./App.css";
 import CarouselFadeExample from ".//components/carousel";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
 
       <CarouselFadeExample />
       <CardTemplate />
+      <Footer />
     </div>
   );
 }
