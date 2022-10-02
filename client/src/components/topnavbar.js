@@ -1,36 +1,36 @@
-import React from 'react'
-
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import { useNavigate } from "react-router-dom";
 
-function topnavbar() {
+
+function Topnavbar() {
+
+    const navigate = useNavigate();
+
+
     return (
         <div>
             <Navbar bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home">DTNS News Blog</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#contact">Contact</Nav.Link>
-                        <Nav.Link href="#aboutUs">About Us</Nav.Link>
-                    </Nav>
+                    <Form.Control
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                    />
+                    <Button variant="secondary">Search</Button>
                 </Container>
+
+                <Button variant="secondary" onClick={() => navigate('/Login')}>Login</Button>
+                <Button variant="secondary" onClick={() => navigate('/signup')}>SignUp</Button>
+
             </Navbar>
-            <Form className="d-flex">
-                <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                />
-                <Button variant="outline-success">Search</Button>
-            </Form>
         </div>
     )
 }
 
-export default topnavbar
+export default Topnavbar

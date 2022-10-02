@@ -1,4 +1,5 @@
-import React from 'react'
+import { useNavigate } from "react-router-dom";
+
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
@@ -6,7 +7,14 @@ import Button from 'react-bootstrap/Button';
 
 import './signup.css'
 
-export default function signUp() {
+
+
+export default function SignUp() {
+
+
+    const navigate = useNavigate();
+
+
     return (
         <div className='sign'>
             <Container style={{ width: '30rem' }}>
@@ -24,7 +32,7 @@ export default function signUp() {
                             <br />
                             <Form.Control type="text" placeholder="Confirm Password" />
                             <br />
-                            <Button variant="secondary">Create Account</Button>
+                            <Button variant="secondary" onClick={() => navigate('/Home')}>Create Account</Button>
                         </Form>
                     </Card.Body>
                 </Card>
