@@ -19,7 +19,21 @@ Front End
     
   
 Backend
-  Postgres AWS RDS Free tier
+
+  Database
+  Users
+    Category - Creator or Viewer
+    First Name
+    Last Name 
+    Email
+    password
+
+  Articles
+    Author (Creator)
+    Title
+    Category
+    Body
+    Media
   
   Features
     Content Creator accounts
