@@ -17,30 +17,28 @@ function Login() {
     const navigate = useNavigate();
 
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [authenticated, setAuthenticated] = useState(localStorage.getItem(localStorage.getItem("authenticated") || false));
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
 
 
 
-    const handleEmail = (event) => {
-        setEmail(event.target.value);
-    };
+    // Handle Login
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const blog = { email, password };
 
-    const handlePassword = (event) => {
-        setPassword(event.target.value);
+        fetch('http://localhost:3000/Login', {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(blog)
+        }).then(() => {
+            console.log('new blog added')
+        })
     }
 
-    const users = [{ email: "DTNS@gmail.com", password: "1234" }];
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const account = users.find((user) => user.email === email);
-        if (account && account.password === password) {
-            setAuthenticated(true)
-            localStorage.setItem("authenticated", true);
-        }
-    };
 
     return (
         <div className='login'>
@@ -49,24 +47,29 @@ function Login() {
                     <h3>Log into DTNS News Blog</h3>
                     <Card.Body >
                         <Form onSubmit={handleSubmit}>
+
                             <Form.Control
-                                id="email"
-                                name="email"
+
                                 type="text"
                                 placeholder="name@example.com"
+                                id="email"
+                                name="email"
                                 value={email}
-                                onChange={handleEmail}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
                             <br />
+
                             <Form.Control
-                                id="password"
-                                name="password"
                                 type="text"
                                 placeholder="password"
+                                id="password"
+                                name="password"
                                 value={password}
-                                onChange={handlePassword} />
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
                             <br />
                             <Button variant="secondary" onClick={() => navigate('/Home')} > LOG IN</Button >
+
                         </Form>
                     </Card.Body>
                 </Card>
