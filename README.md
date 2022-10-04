@@ -33,7 +33,7 @@ Backend
     Title
     Category
     Body
-    Media
+    Picture
   
   Features
     Content Creator accounts
