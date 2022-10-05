@@ -1,4 +1,5 @@
 import TopNavBar from "./topnavbar";
+import Footer from "./footer";
 
 export default function About() {
   return (
@@ -11,6 +12,7 @@ export default function About() {
       <p>Bio</p>
       <h2>Marceilla Norman</h2>
       <p>Bio</p>
+      <Footer />
     </div>
   );
 }

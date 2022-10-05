@@ -3,10 +3,11 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Footer from "./footer";
 
 export default function CreatePost() {
   return (
-    <div className="createpost">
+    <>
       <TopNavBar />
       <Container style={{ width: "30rem" }}>
         <Card style={{ top: "9rem" }}>
@@ -31,6 +32,7 @@ export default function CreatePost() {
           </Card.Body>
         </Card>
       </Container>
-    </div>
+      <Footer />
+    </>
   );
 }

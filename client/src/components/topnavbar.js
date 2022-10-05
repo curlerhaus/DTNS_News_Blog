@@ -15,6 +15,8 @@ function topnavbar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
+
+            <Nav.Link href="/createpost">Create Post</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

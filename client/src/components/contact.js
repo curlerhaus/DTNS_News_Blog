@@ -2,6 +2,7 @@ import Form from "react-bootstrap/Form";
 import TopNavBar from "./topnavbar";
 import "./contact.css";
 import Button from "react-bootstrap/Button";
+import Footer from "./footer";
 
 export default function Contact() {
   return (
@@ -21,6 +22,7 @@ export default function Contact() {
           Submit
         </Button>
       </Form>
+      <Footer />
     </>
   );
 }
