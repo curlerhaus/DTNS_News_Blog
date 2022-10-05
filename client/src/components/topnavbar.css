@@ -5,3 +5,9 @@ img {
 .search {
     width: 10px;
 }
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}

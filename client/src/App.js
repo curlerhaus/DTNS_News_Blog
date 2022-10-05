@@ -8,22 +8,20 @@ import Contact from "./components/contact";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from "./components/about";
+import CreatePost from "./components/createpost";
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          {/* <TopNavBar /> */}
-          {/* <Home /> */}
-          {/* <Select /> */}
-          {/* <Login /> */}
           <Route path="/" element={<TopNavBar />} />
           <Route path="login" element={<Login />} />
           <Route path="Signup" element={<SignUp />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="createpost" element={<CreatePost />} />
         </Routes>
       </Router>
     </div>

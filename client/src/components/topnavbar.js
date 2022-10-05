@@ -20,6 +20,7 @@ function Topnavbar() {
           <Nav className="me-auto">
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
+            <Nav.Link href="/createpost">Create Post</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -28,6 +29,8 @@ function Topnavbar() {
               className="me-6"
               aria-label="Search"
             />
+            <div class="divider" />
+
             <Button variant="secondary">Search</Button>
           </Form>
         </Container>
@@ -35,9 +38,11 @@ function Topnavbar() {
         <Button variant="secondary" onClick={() => navigate("/Login")}>
           Login
         </Button>
+        <div class="divider" />
         <Button variant="secondary" onClick={() => navigate("/signup")}>
           SignUp
         </Button>
+        <div class="divider" />
       </Navbar>
     </div>
   );
