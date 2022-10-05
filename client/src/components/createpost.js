@@ -9,7 +9,7 @@ export default function CreatePost() {
   return (
     <>
       <TopNavBar />
-      <Container style={{ width: "30rem" }}>
+      <Container style={{ width: "60rem" }}>
         <Card style={{ top: "9rem" }}>
           <h1>Create Post</h1>
           <Card.Body>
