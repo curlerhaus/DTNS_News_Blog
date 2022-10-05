@@ -5,7 +5,10 @@ import "./cards.css";
 function CardTemplate() {
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="/card_image_286x180.png" />
+      <Card.Img
+        variant="top"
+        src="https://place-puppy.com/public-images/index-page/image8/210x280-lg.jpg"
+      />
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
         <Card.Text>
