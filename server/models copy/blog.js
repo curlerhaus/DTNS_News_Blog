@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 
 let blogSchema = new mongoose.Schema({
     author: { type: String, default: 'Anonymous' },
-    rant: { type: Boolean, default: false },
-    date: { type: Number, default: Date.now },
+    categories: { type: String, default: ''},
+    date: { type: Date, default: Date.now },
     content: { type: String, default: '' }
 })
   
