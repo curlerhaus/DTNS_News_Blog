@@ -1,11 +1,10 @@
-  /* FOOTER */
   .footer{
     background-color: #9f9f9f;
     padding: 10px;
     text-align: center;
     font-size: 14px;
     color: rgb(59, 57, 57);
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;

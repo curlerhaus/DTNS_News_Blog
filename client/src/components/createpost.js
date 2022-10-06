@@ -9,8 +9,8 @@ export default function CreatePost() {
   return (
     <>
       <TopNavBar />
-      <Container style={{ width: "60rem" }}>
-        <Card style={{ top: "9rem" }}>
+      <Container className="mb-3" controlId="exampleForm.ControlInput1">
+        <Card>
           <h1>Create Post</h1>
           <Card.Body>
             <Form>
@@ -31,7 +31,7 @@ export default function CreatePost() {
             </Form>
           </Card.Body>
         </Card>
-      </Container>
+      </Container>{" "}
       <Footer />
     </>
   );
