@@ -1,5 +1,5 @@
 const React = require('react')
-const Def = require('./default')
+const Def = require('./Blogs')
 
 function home () {
     return (
@@ -8,9 +8,13 @@ function home () {
                 <h1>DTN News Blog</h1>
                 <div> 
                     <img className="col-sm-12" src="./public/logo/logo-no-bakcground.png" alt="logo" />
-            
                 </div>
+                <a href="/home">
+                    <button className="btn-primary">Home Page</button>
+                </a>
             </main>
         </Def>
     )
 }
+
+module.exports = home

@@ -1,21 +1,18 @@
 const React = require('react')
-const Def = require('../default')
+const Def = require('.')
 
 function index (data) {
     let blogsFormatted = data.blogs.map((blog) => {
       return (
         <div className="col-sm-6">
-          <h2>
+          <h3>
             <a href={`/blogs/${blog.id}`}>
               {blog.name}
             </a>
-          </h2>
-          <p className="text-center">
-            {blog.categories}
-          </p>
+          </h3>
           <img src={blog.pic} alt={blog.name}/>
           <p className="text-center">
-            Located in {blog.categories}, {blog.content}
+            Description {blog.categories}, {blog.content}
           </p>
         </div>
       )
