@@ -1,0 +1,2 @@
+MONGO_URI=mongodb://localhost:27017/DTNS_News_Blog
+PORT=3000
