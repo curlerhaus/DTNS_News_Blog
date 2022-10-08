@@ -1,31 +1,49 @@
-//Dependencies
+//dependencies
 require('dotenv').config()
-const express = require('express')
+const express = require('express');
+require('./models/signUpModels')
+const User = require('./models/signUpModels')
+const app = express();
 
-const app = express()
 const cors = require('cors')
 
 
-
 const mongoose = require('mongoose')
-
-
 mongoose.connect(process.env.DATABASE_ACCESS, () => console.log("Hi, my DATABASE is connected!"))
 
-app.use(express.json())
+//middleware
+app.use(express.json());
 app.use(cors())
 
+//signup routes
+app.post("/signup", async (req, res) => {
+    let user = new User(req.body);
+    let result = await user.save();
+    result = result.toObject();
+    delete result.password
+    res.send(result);
+})
 
 
-//MiddleWare
-// create a login route
-// app.get('/login', function (req, res) {
-//     res.send('My Login Page!')
+//login route
+app.post("/login", async (req, res) => {
+    if (req.body.password && req.body.email) {
+
+
+        let user = await User.findOne(req.body).select("-password");
+        if (user) {
+            res.send(user)
+        } else {
+            res.send({ result: "No Data Found" })
+        }
+    }
+})
+
+
+// app.use((req, res, next) => {
+//     res.status(404).send('page not found')
 // })
 
-
-
-// Create a signup route
-app.use('/signup', require('./controllers/signup'))
-
+//listen
 app.listen(process.env.PORT)
+

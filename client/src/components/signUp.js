@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom";
+
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 
 import Container from 'react-bootstrap/Container';
@@ -13,7 +14,6 @@ import './signup.css'
 
 export default function SignUp() {
 
-    const navigate = useNavigate();
 
 
     //State for Registration
@@ -22,22 +22,42 @@ export default function SignUp() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [password2, setPassword2] = useState('')
-
-    //state for checking the errors
-    const [submitted, setSubmitted] = useState(false);
-    const [error, setError] = useState(false);
+    const navigate = useNavigate();
 
 
-    // Handling the firstname change
+
+
+    const collectData = async () => {
+        console.log(firstName, lastName, email, password, password2);
+        let result = await fetch("http://localhost:5000/signup", {
+            method: 'post',
+            body: JSON.stringify({ firstName, lastName, email, password, password2 }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        result = await result.json();
+        console.log(result);
+        localStorage.setItem("user", JSON.stringify(result));
+        navigate('/login')
+
+    }
+
+
+
+
+
+
+    // Handling the first change
     const handleFirstName = (e) => {
         setFirstName(e.target.value);
-        setSubmitted(false);
+
     };
 
-    // Handling the lastname change
+    // Handling the last change
     const handleLastName = (e) => {
         setLastName(e.target.value);
-        setSubmitted(false);
+
     };
 
 
@@ -45,66 +65,26 @@ export default function SignUp() {
     // Handling the email change
     const handleEmail = (e) => {
         setEmail(e.target.value);
-        setSubmitted(false);
+
     };
 
     // Handling the password change
     const handlePassword = (e) => {
         setPassword(e.target.value);
-        setSubmitted(false);
+
     };
 
     // Handling the password2 confirm
     const handlePassword2 = (e) => {
-        setPassword2(e.target.value);
-        setSubmitted(false);
-    };
-
-    // Handling the form submission
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (firstName === '' || lastName === '' || email === '' || password === '' || password2 === '') {
-            setError(true);
-            navigate("/login")
-        } else {
-            setSubmitted(true);
-            setError(false);
-        }
-
+        setPassword2(e.target.value)
 
     };
 
-    // Showing success message
-    const successMessage = () => {
-        return (
-            <div
-                style={{
-                    display: submitted ? '' : 'none',
-                }}>
-                <h1>User {email} successfully registered!!</h1>
-            </div>
-        );
-    };
 
-    // Showing error message if error is true
-    const errorMessage = () => {
-        return (
-            <div
-                style={{
-                    display: error ? '' : 'none',
-                }}>
-                <h1>Please enter all the fields</h1>
-            </div>
-        );
-    };
+
 
     return (
         <div className='sign'>
-            {/* Calling to the methods */}
-            <div>
-                {errorMessage()}
-                {successMessage()}
-            </div>
             <Container style={{ width: '30rem' }}>
                 <Card style={{ top: '9rem' }}>
                     <h1>Sign Up</h1>
@@ -151,7 +131,7 @@ export default function SignUp() {
                                 value={password2}
                                 onChange={handlePassword2} />
                             <br />
-                            <Button variant="secondary" type="submit" onClick={handleSubmit}>Create Account</Button>
+                            <Button variant="secondary" type="button" onClick={collectData}>Create Account</Button>
                         </Form>
                     </Card.Body>
                 </Card>
