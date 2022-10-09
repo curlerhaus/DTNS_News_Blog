@@ -14,9 +14,10 @@ mongoose.connect(process.env.DATABASE_ACCESS, {
   useUnifiedTopology: true,
 });
 
-mongoose.connection.on("connected", () => {
-  console.log("Hi, my DATABASE is connected!");
-});
+const mongoose = require("mongoose");
+mongoose.connect(process.env.DATABASE_ACCESS, () =>
+  console.log("Hi, my DATABASE is connected!")
+);
 
 //middleware
 app.use(express.json());
@@ -41,14 +42,6 @@ app.post("/login", async (req, res) => {
       res.send({ result: "No Data Found" });
     }
   }
-});
-
-//CREATE NEW POST
-app.post("/createpost", async (req, res) => {
-  let post = new Post(req.body);
-  let result = await post.save();
-  result = result.toObject();
-  res.send(result);
 });
 
 // //GET ALL POSTS

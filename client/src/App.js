@@ -1,12 +1,11 @@
 import React from "react";
 import SignUp from "./components/signUp";
-import Select from "./components/select";
 import Login from "./components/login";
 import TopNavBar from "./components/topnavbar";
 import Home from "./components/home";
 import Contact from "./components/contact";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/about";
 import CreatePost from "./components/createpost";
 
