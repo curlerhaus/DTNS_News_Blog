@@ -10,12 +10,9 @@ const Post = require("./models/Post");
 const cors = require("cors");
 const path = require("path");
 
-mongoose.connect(process.env.DATABASE_ACCESS, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const mongoose = require("mongoose");
 
-// const mongoose = require("mongoose");
+// const { response } = require('express');
 mongoose.connect(process.env.DATABASE_ACCESS, () =>
   console.log("Hi, my DATABASE is connected!")
 );
