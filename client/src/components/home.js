@@ -3,17 +3,27 @@ import CarouselFadeExample from "../components/carousel";
 import CardTemplate from "../components/cards";
 import Footer from "../components/footer";
 import Topnavbar from "./topnavbar";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Home() {
+  const [posts, setPosts] = useState([]);
+  // const { search } = useLocation();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const res = await axios.get("/posts");
+      setPosts(res.data);
+    };
+    fetchPosts();
+  }, []);
+
   return (
     <>
-      <div className="header">
-        {/* <img className="logo" src="./logo/logo-black.png" alt="DTNS Logo"></img>
-        <h1>Your Worst Place for News</h1> */}
-      </div>
+      <div className="header"></div>
       <Topnavbar />
       <CarouselFadeExample />
-      <CardTemplate />
+      <CardTemplate posts={posts} />
       <Footer />
     </>
   );
