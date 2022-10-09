@@ -9,14 +9,11 @@ const cors = require("cors");
 const path = require("path");
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.DATABASE_ACCESS, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
-mongoose.connection.on("connected", () => {
-  console.log("Hi, my DATABASE is connected!");
-});
+// const { response } = require('express');
+mongoose.connect(process.env.DATABASE_ACCESS, () =>
+  console.log("Hi, my DATABASE is connected!")
+);
 
 //middleware
 app.use(express.json());
