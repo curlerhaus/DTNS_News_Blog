@@ -5,13 +5,18 @@ require("./models/signUpModels");
 const User = require("./models/signUpModels");
 const app = express();
 const Post = require("./models/Post");
-
 const cors = require("cors");
+const path = require("path");
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.DATABASE_ACCESS, () =>
-  console.log("Hi, my DATABASE is connected!")
-);
+mongoose.connect(process.env.DATABASE_ACCESS, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+mongoose.connection.on("connected", () => {
+  console.log("Hi, my DATABASE is connected!");
+});
 
 //middleware
 app.use(express.json());
@@ -45,6 +50,29 @@ app.post("/createpost", async (req, res) => {
   result = result.toObject();
   res.send(result);
 });
+
+// //GET ALL POSTS
+// app.get("/", async (req, res) => {
+//   const username = req.query.user;
+//   const catName = req.query.cat;
+//   try {
+//     let posts;
+//     if (username) {
+//       posts = await Post.find({ username });
+//     } else if (catName) {
+//       posts = await Post.find({
+//         categories: {
+//           $in: [catName],
+//         },
+//       });
+//     } else {
+//       posts = await Post.find();
+//     }
+//     res.status(200).json(posts);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // app.use((req, res, next) => {
 //     res.status(404).send('page not found')
