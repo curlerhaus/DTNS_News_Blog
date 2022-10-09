@@ -1,5 +1,7 @@
 //dependencies
 require("dotenv").config();
+const mongoose = require("mongoose");
+
 const express = require("express");
 require("./models/signUpModels");
 const User = require("./models/signUpModels");
@@ -8,13 +10,12 @@ const Post = require("./models/Post");
 const cors = require("cors");
 const path = require("path");
 
-const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE_ACCESS, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 mongoose.connect(process.env.DATABASE_ACCESS, () =>
   console.log("Hi, my DATABASE is connected!")
 );
