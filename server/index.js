@@ -2,13 +2,15 @@
 require('dotenv').config()
 const express = require('express');
 require('./models/signUpModels')
-const User = require('./models/signUpModels')
+const User = require('./models/signUpModels') //schema data
 const app = express();
 
 const cors = require('cors')
 
 
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+
+// const { response } = require('express');
 mongoose.connect(process.env.DATABASE_ACCESS, () => console.log("Hi, my DATABASE is connected!"))
 
 //middleware
@@ -28,15 +30,17 @@ app.post("/signup", async (req, res) => {
 //login route
 app.post("/login", async (req, res) => {
     if (req.body.password && req.body.email) {
-
-
         let user = await User.findOne(req.body).select("-password");
         if (user) {
             res.send(user)
         } else {
-            res.send({ result: "No Data Found" })
+            res.send({ result: "No data found!" })
         }
+    } else {
+        res.send({ result: "No data found!" })
     }
+
+
 })
 
 
