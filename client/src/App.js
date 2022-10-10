@@ -1,7 +1,6 @@
 import React from "react";
 import SignUp from "./components/signUp";
 import Login from "./components/login";
-import TopNavBar from "./components/topnavbar";
 import Home from "./components/home";
 import Contact from "./components/contact";
 
@@ -12,11 +11,9 @@ import CreatePost from "./components/createpost";
 function App() {
   return (
     <div>
-
-
       <Router>
         <Routes>
-          <Route path="/" element={<TopNavBar />} />
+          <Route path="/" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="Signup" element={<SignUp />} />
           <Route path="home" element={<Home />} />
