@@ -1,13 +1,13 @@
 img {
-    height: 50px;
+  height: 50px;
 }
 
 .search {
-    width: 10px;
+  width: 10px;
 }
 
-.divider{
-    width:5px;
-    height:auto;
-    display:inline-block;
+.divider {
+  width: 5px;
+  height: auto;
+  border-spacing: 15px 50px;
 }
