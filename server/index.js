@@ -42,6 +42,14 @@ app.post("/login", async (req, res) => {
   }
 });
 
+//CREATE NEW POST
+app.post("/createpost", async (req, res) => {
+  let post = new Post(req.body);
+  let result = await post.save();
+  result = result.toObject();
+  res.send(result);
+});
+
 // app.use((req, res, next) => {
 //     res.status(404).send('page not found')
 // })
@@ -56,8 +64,6 @@ app.listen(process.env.PORT);
 // const methodOverride = require("method-override");
 // const mongoose = require("mongoose");
 // const PORT = process.env.PORT;
-
-
 
 // app.use(express.static("public"));
 // app.use(express.urlencoded({ extended: true }));
@@ -84,5 +90,3 @@ app.listen(process.env.PORT);
 // app.listen(PORT, () => {
 //   console.log("listening at port", PORT);
 // });
-
-
