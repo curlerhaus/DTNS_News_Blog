@@ -21,7 +21,7 @@ export default function SignUp() {
 
   const collectData = async () => {
     console.log(firstName, lastName, email, password, password2);
-    let result = await fetch("http://localhost:5001/signup", {
+    let result = await fetch("https://dtnnews-ddrn0rd9e-curlerhaus.vercel.app/", {
       method: "post",
       body: JSON.stringify({ firstName, lastName, email, password, password2 }),
       headers: {
