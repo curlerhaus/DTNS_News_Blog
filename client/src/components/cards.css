@@ -1,4 +1,4 @@
-img {
+.cardimg {
     height: 100%;
     width: auto;
     border-radius: 10px;
@@ -21,3 +21,8 @@ img {
     justify-content: center;
     align-items: center;
  }
+
+ .cardtitle {
+    text-align: center;
+ }
+ 

@@ -11,8 +11,10 @@
     position:center;
     top:0;
     left:0;
+    border-radius: 10px;
     }
-img {
+
+  img {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -27,4 +29,8 @@ img {
 .captiontext {
   color: black;
   opacity: 100%;
+}
+
+.carouselimg {
+  border-radius: 10px;
 }

@@ -9,9 +9,9 @@ function CardTemplate({ posts }) {
     <>
       <h1>More News Stories</h1>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="./tacos.jpg" />
+        <Card.Img className="cardimg" variant="top" src="./tacos.jpg" />
         <Card.Body>
-          <Card.Title>Tacos! Tacos! Tacos!</Card.Title>
+          <Card.Title className="cardtitle">Tacos! Tacos! Tacos!</Card.Title>
           <Card.Text className="posttext">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
