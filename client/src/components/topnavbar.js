@@ -17,7 +17,7 @@ function Topnavbar() {
   }
 
   return (
-    <div>
+    <div >
       <Navbar bg="dark" variant="dark" >
         <Container>
           <Nav.Link href="/home" className="logo">
@@ -31,10 +31,10 @@ function Topnavbar() {
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-6"
               aria-label="Search"
+              className="spacing"
             />
-            <Button variant="secondary">Search</Button>
+            <Button variant="secondary" className="search">Search</Button>
           </Form>
         </Container>
 
@@ -46,7 +46,7 @@ function Topnavbar() {
         </Button>
 
           : <>
-            <Button variant="secondary" onClick={() => navigate("/home")}>
+            <Button variant="secondary" onClick={() => navigate("/login")} className="spacing">
               Login
             </Button>
             <Button variant="secondary" onClick={() => navigate("/signup")}>
