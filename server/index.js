@@ -39,6 +39,15 @@ app.post("/login", async (req, res) => {
     }
 })
 
+app.get('/search', function(req, res, next) {
+    res.send('Respond from server');
+    res.end()
+  });
+
+app.get("/search/page",(req,res,next)=>{
+    res.send("Respond to the search page")
+    res.end()
+  })
 
 // app.use((req, res, next) => {
 //     res.status(404).send('page not found')
