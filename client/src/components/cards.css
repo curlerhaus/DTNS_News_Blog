@@ -16,3 +16,8 @@ img {
  h1 {
     text-align: center;
  }
+
+ .button {
+    justify-content: center;
+    align-items: center;
+ }

@@ -22,7 +22,9 @@ function CardTemplate({ posts }) {
             culpa qui officia deserunt mollit anim id est laborum.
           </Card.Text>
           <Link to="/postpage">
-            <Button variant="primary">Go somewhere</Button>
+            <div className="button">
+              <Button variant="primary">Read More</Button>
+            </div>
           </Link>
         </Card.Body>
       </Card>
