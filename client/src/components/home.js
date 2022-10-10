@@ -8,15 +8,14 @@ import axios from "axios";
 
 function Home() {
   const [posts, setPosts] = useState([]);
-  // const { search } = useLocation();
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const res = await axios.get("/posts");
-      setPosts(res.data);
-    };
-    fetchPosts();
-  }, []);
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     const res = await axios.get("/posts");
+  //     setPosts(res.data);
+  //   };
+  //   fetchPosts();
+  // }, []);
 
   return (
     <>
