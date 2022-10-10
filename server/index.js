@@ -81,15 +81,15 @@ app.post("/createpost", async (req, res) => {
 //   }
 // });
 
-// app.get("/posts", async (req, res) => {
-//   const getPosts = await db
-//     .collection("posts")
-//     .find()
-//     .toArray()
-//     .then((getPosts) => {
-//       console.log("These are the posts: ", getPosts);
-//     });
-// });
+app.get("/posts", async (req, res) => {
+  const getPosts = await db
+    .collection("posts")
+    .find()
+    .toArray()
+    .then((getPosts) => {
+      console.log("These are the posts: ", getPosts);
+    });
+});
 
 // //GET ALL POSTS
 // app.get("/", async (req, res) => {
