@@ -31,7 +31,7 @@ export default function SignUp() {
     result = await result.json();
     console.log("Here is the result", result);
     localStorage.setItem("user", JSON.stringify(result));
-    navigate("/login");
+    navigate("/home");
   };
 
   // Handling the first change

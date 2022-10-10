@@ -1,13 +1,12 @@
+//Meng Index file
 //dependencies
 require("dotenv").config();
-
 const express = require("express");
 require("./models/signUpModels");
-const User = require("./models/signUpModels");
+const User = require("./models/signUpModels"); //schema data
 const app = express();
-const Post = require("./models/Post");
+
 const cors = require("cors");
-const path = require("path");
 
 const mongoose = require("mongoose");
 
@@ -36,33 +35,12 @@ app.post("/login", async (req, res) => {
     if (user) {
       res.send(user);
     } else {
-      res.send({ result: "No Data Found" });
+      res.send({ result: "No data found!" });
     }
+  } else {
+    res.send({ result: "No data found!" });
   }
 });
-
-// //GET ALL POSTS
-// app.get("/", async (req, res) => {
-//   const username = req.query.user;
-//   const catName = req.query.cat;
-//   try {
-//     let posts;
-//     if (username) {
-//       posts = await Post.find({ username });
-//     } else if (catName) {
-//       posts = await Post.find({
-//         categories: {
-//           $in: [catName],
-//         },
-//       });
-//     } else {
-//       posts = await Post.find();
-//     }
-//     res.status(200).json(posts);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
 
 // app.use((req, res, next) => {
 //     res.status(404).send('page not found')
@@ -70,3 +48,41 @@ app.post("/login", async (req, res) => {
 
 //listen
 app.listen(process.env.PORT);
+
+//Marcella old index.js
+// require("dotenv").config();
+// const express = require("express");
+// const app = express();
+// const methodOverride = require("method-override");
+// const mongoose = require("mongoose");
+// const PORT = process.env.PORT;
+
+
+
+// app.use(express.static("public"));
+// app.use(express.urlencoded({ extended: true }));
+// app.use(methodOverride("_method"));
+
+// mongoose.connect(
+//   process.env.MONGO_URI,
+//   { useNewUrlParser: true, useUnifiedTopology: true },
+//   () => {
+//     console.log("connected to mongo: ", process.env.MONGO_URI);
+//   }
+// );
+
+// app.get("/login", (req, res) => res.render("login"));
+
+// app.get("/", (req, res) => {
+//   res.render("home");
+// });
+
+// app.get("*", (req, res) => {
+//   res.render("error404");
+// });
+
+// app.listen(PORT, () => {
+//   console.log("listening at port", PORT);
+// });
+
+
