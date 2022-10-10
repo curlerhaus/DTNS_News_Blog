@@ -1,4 +1,18 @@
 img {
     height: 100%;
     width: auto;
+    border-radius: 10px;
+
 }
+
+.posttext {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+ }
+
+ h1 {
+    text-align: center;
+ }

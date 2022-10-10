@@ -2,7 +2,7 @@
 .carousel {
     width:auto;
     height: 360px;
-    background-color: gray;
+    background-color: lightgray;
   } 
   
   .slider-container {
@@ -17,4 +17,14 @@ img {
     margin-right: auto;
     display: flex;
     justify-content: center;
+}
+
+.caption {
+  background-color: lightgray;
+  opacity: 75%;
+}
+
+.captiontext {
+  color: black;
+  opacity: 100%;
 }

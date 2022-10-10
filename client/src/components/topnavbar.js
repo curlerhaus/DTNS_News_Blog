@@ -9,19 +9,20 @@ import Nav from "react-bootstrap/Nav";
 
 function Topnavbar() {
   const navigate = useNavigate();
-  const change = localStorage.getItem('user');
+  const change = localStorage.getItem("user");
 
   const logOut = () => {
     localStorage.clear();
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   return (
-    <div >
-      <Navbar bg="dark" variant="dark" >
+    <div>
+      <Navbar bg="dark" variant="dark">
         <Container>
           <Nav.Link href="/home" className="logo">
-            <img src="./logo/DTN_logo.png" alt="logo" /></Nav.Link>
+            <img src="./logo/DTN_logo.png" alt="logo" />
+          </Nav.Link>
           <Nav className="me-auto">
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/about">About Us</Nav.Link>
@@ -34,36 +35,34 @@ function Topnavbar() {
               aria-label="Search"
               className="spacing"
             />
-            <Button variant="secondary" className="search">Search</Button>
+            <Button variant="secondary" className="search">
+              Search
+            </Button>
           </Form>
         </Container>
 
-
-
         {/* Signup button to Login */}
-        {change ? <Button variant="secondary" onClick={logOut} to="/">
-          Logout
-        </Button>
-
-          : <>
-            <Button variant="secondary" className="spacing" onClick={() => navigate("/login")}>
+        {change ? (
+          <Button variant="secondary" onClick={logOut} to="/">
+            Logout
+          </Button>
+        ) : (
+          <>
+            <Button
+              variant="secondary"
+              className="spacing"
+              onClick={() => navigate("/login")}
+            >
               Login
             </Button>
             <Button variant="secondary" onClick={() => navigate("/signup")}>
               SignUp
             </Button>
-
           </>
-        }
-
-
+        )}
       </Navbar>
     </div>
-  )
+  );
 }
-
-
-
-
 
 export default Topnavbar;

@@ -5,40 +5,38 @@ function CarouselFadeExample() {
   return (
     <Carousel>
       <Carousel.Item>
-        <img
-          className="slider-container"
-          src="/news_placeholder_360x360.png"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <img className="slider-container" src="/tech.jpg" alt="First slide" />
+        <Carousel.Caption className="caption">
+          <div className="captiontext">
+            <h3>Here is a generic story about technology</h3>
+            <p>Look at this fun caption</p>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="slider-container"
-          src="/news_placeholder_360x360.png"
-          alt="Second slide"
-        />
+        <img className="slider-container" src="/robot.jpg" alt="Second slide" />
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <Carousel.Caption className="caption">
+          <div className="captiontext">
+            <h3>Space Robots!</h3>
+            <p>Will the murder us all? Who knows?</p>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="slider-container"
-          src="https://place-puppy.com/300x300"
+          src="football.jpg"
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+        <Carousel.Caption className="caption">
+          <div className="captiontext">
+            <h3>Sports ball match!</h3>
+            <p>
+              Have you seen the people getting hurt on the sports ball field?
+            </p>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

@@ -3,6 +3,7 @@ import SignUp from "./components/signUp";
 import Login from "./components/login";
 import Home from "./components/home";
 import Contact from "./components/contact";
+import Postpage from "./components/postpage";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/about";
@@ -20,6 +21,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="post" element={<CreatePost />} />
+          <Route path="postpage" element={<Postpage />} />
         </Routes>
       </Router>
     </div>

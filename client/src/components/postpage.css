@@ -1,0 +1,13 @@
+.postimg {
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.posttext {
+    padding: 5%;
+}
+
+.postheadline {
+    text-align: center;
+}

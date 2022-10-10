@@ -1,9 +1,9 @@
   .footer{
-    background-color: #9f9f9f;
+    background-color: black;
     padding: 10px;
     text-align: center;
     font-size: 14px;
-    color: rgb(59, 57, 57);
+    color: white;
     position: relative;
     left: 0;
     bottom: 0;
@@ -13,5 +13,5 @@
 .footer h3{
     font-size: 1.5rem;
     font-weight: bold;
-    color: #3b3b3b;
+    color: white;
 }
