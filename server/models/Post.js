@@ -23,6 +23,7 @@ const PostsSchema = new mongoose.Schema(
       type: Array,
       required: false,
     },
+    posts: [],
   },
   { timestamps: true }
 );
