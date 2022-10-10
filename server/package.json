@@ -19,5 +19,5 @@
     "mongoose": "^6.6.5",
     "nodemon": "^2.0.20"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:5001"
 }
