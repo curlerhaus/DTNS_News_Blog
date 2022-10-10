@@ -5,6 +5,7 @@ const express = require("express");
 require("./models/signUpModels");
 const User = require("./models/signUpModels"); //schema data
 const app = express();
+const Post = require("./models/Post");
 
 const cors = require("cors");
 
