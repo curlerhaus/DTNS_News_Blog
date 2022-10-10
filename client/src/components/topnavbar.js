@@ -46,7 +46,7 @@ function Topnavbar() {
         </Button>
 
           : <>
-            <Button variant="secondary" onClick={() => navigate("/login")} className="spacing">
+            <Button variant="secondary" className="spacing" onClick={() => navigate("/login")}>
               Login
             </Button>
             <Button variant="secondary" onClick={() => navigate("/signup")}>
