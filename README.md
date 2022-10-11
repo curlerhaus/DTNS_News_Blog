@@ -1,48 +1,42 @@
 # DTNS_News_Blog
-MERN Stack Project
 
-Front End
+#MERN Stack Project
 
-  React
-  
+#Front End
+  ##React
     Commentor account signup
     Apply for a content creator account
     Pages  
-      
       Home Page
-      
       Topics
         Sports
         Coding
         Food
         Travel
         Random
-      
       About Us
-      
       Contact
-      
       Search Page
     
   
-Backend
+#Backend
 
-  Database
-  Users
+ ##Database
+  ###Users
     Category - Creator or Viewer
     First Name
     Last Name 
     Email
     password
 
-  Articles
+  ###Articles
     Author (Creator)
     Title
     Category
     Body
     Picture
   
-  Features
+  ###Features
     Content Creator accounts
     Commentors accounts
     Articles - written, pics, videos, audio
