@@ -2,19 +2,26 @@
 MERN Stack Project
 
 Front End
+
   React
+  
     Commentor account signup
     Apply for a content creator account
     Pages  
+      
       Home Page
+      
       Topics
         Sports
         Coding
         Food
         Travel
         Random
+      
       About Us
+      
       Contact
+      
       Search Page
     
   
