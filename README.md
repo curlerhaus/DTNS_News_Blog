@@ -4,7 +4,7 @@
 
 ### Front-End
 
-We are using React for our front-end project
+We are using React to create these files
 
     Commentor account signup
     Apply for a content creator account
