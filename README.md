@@ -1,45 +1,54 @@
-# DTNS_News_Blog
+# **DTNS_News_Blog**
 
-## MERN Stack Project
+## **MERN Stack Project**
 
-#Front End
-  React
+### Front-End
+
+We are using React for our front-end project
+
     Commentor account signup
     Apply for a content creator account
     Pages  
       Home Page
-      Topics
-        Sports
-        Coding
-        Food
-        Travel
-        Random
+        Topics
+          Sports
+          Coding
+          Food
+          Travel
+          Random
       About Us
       Contact
-      Search Page
+      Search
+      Login
+      SignUp
+      Logout
     
   
-#Backend
+### Back-end
 
- ##Database
-  ###Users
-    Category - Creator or Viewer
-    First Name
-    Last Name 
-    Email
-    password
-
-  ###Articles
-    Author (Creator)
-    Title
-    Category
-    Body
-    Picture
+  Database that we are using:
   
-  ###Features
-    Content Creator accounts
-    Commentors accounts
-    Articles - written, pics, videos, audio
+    Users 
+    
+      Category - Creator or Viewer
+      First Name
+      Last Name
+      Email
+      Password
+
+    Articles
+      
+      Author (Creator)
+      Title
+      Category
+      Body
+      Picture
+  
+    Features
+    
+      Content Creator accounts
+      Commentors accounts
+      Articles - written, pics, videos, audio
       topic category
 
 
