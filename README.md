@@ -1,6 +1,6 @@
 # DTNS_News_Blog
 
-#MERN Stack Project
+## MERN Stack Project
 
 #Front End
   React
