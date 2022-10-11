@@ -3,7 +3,7 @@
 #MERN Stack Project
 
 #Front End
-  ##React
+  React
     Commentor account signup
     Apply for a content creator account
     Pages  
