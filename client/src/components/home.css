@@ -6,3 +6,10 @@
   .header {
     display: flex;
   }
+
+  .homecards {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    column-gap: 15px;
+  }

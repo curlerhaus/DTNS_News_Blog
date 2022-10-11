@@ -7,7 +7,6 @@ function CardTemplate({ posts }) {
   console.log("Here are the posts", posts);
   return (
     <>
-      <h1>More News Stories</h1>
       <Card style={{ width: "18rem" }}>
         <Card.Img className="cardimg" variant="top" src="./tacos.jpg" />
         <Card.Body>

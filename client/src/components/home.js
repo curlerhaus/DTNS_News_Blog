@@ -23,7 +23,14 @@ function Home() {
       <div className="header"></div>
       <Topnavbar />
       <CarouselFadeExample />
-      <CardTemplate posts={posts} />
+      <h1>More News Stories</h1>
+
+      <div className="homecards">
+        <CardTemplate posts={posts} />
+        <CardTemplate posts={posts} />
+        <CardTemplate posts={posts} />
+      </div>
+
       <Footer />
     </>
   );
