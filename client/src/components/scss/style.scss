@@ -1,0 +1,33 @@
+@import "utilities";
+@import "btnConfig";
+@import "config";
+
+img {
+  justify-content: left;
+  display: flex;
+}
+
+.aboutpage {
+  @include set-bg($primary-color);
+  height: auto;
+  background-color: $primary-color;
+  color: $font-color;
+
+  h1 {
+    text-align: center;
+    color: $font-color;
+  }
+
+  p {
+    color: $font-color;
+  }
+
+  .aboutimg {
+    justify-content: left;
+    display: flex;
+  }
+}
+
+.contactUs {
+  @include theme-colors($light-theme: true);
+}
