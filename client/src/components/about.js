@@ -1,12 +1,13 @@
 import TopNavBar from "./topnavbar";
 import Footer from "./footer";
-import "./about.css";
+// import "./about.css";
+import "./scss/style.css";
 
 export default function About() {
   return (
     <div className="aboutpage">
       <TopNavBar />
-      <h1 style={{ "text-align": "center" }}>Our Team</h1>
+      <h1>Our Team</h1>
       <div>
         <div className="aboutimg">
           <div>

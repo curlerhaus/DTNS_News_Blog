@@ -19,7 +19,7 @@ function CarouselFadeExample() {
         <Carousel.Caption className="caption">
           <div className="captiontext">
             <h3>Space Robots!</h3>
-            <p>Will the murder us all? Who knows?</p>
+            <p>Will they murder us all? Who knows?</p>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
