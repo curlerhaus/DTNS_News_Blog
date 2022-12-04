@@ -2,7 +2,7 @@
 
 ## **MERN Stack Project**
 
-### **Description**
+### Description
   This is a simple News website. A registered user can signup for an account. Once signed up a user can post a news article.
 
 ### Demo
