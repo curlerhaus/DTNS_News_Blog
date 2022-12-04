@@ -2,19 +2,43 @@
 
 ## **MERN Stack Project**
 
-### **Description
+### **Description**
+  This is a simple News website. A registered user can signup for an account. Once signed up a user can post a news article.
+
+### Demo
+![Screenshot](./client/public/Screenshot.png)
+
+### Technologies
+Front End:
+  Axios
+  Bootstrap
+  Common
+  React
+  React-bootstrap
+  React-DOM
+  React-Router-DOM
+  React-Scripts
+  Sass
+  Web-vitals
+
+Back End:
+  Common
+  Cors
+  Debug
+  Dotenv
+  Express
+  Express-React-Views
+  Mongoose
+  Nodemon
+
+### Technical Information
+  Fork and clone the repo. Run 'npm install' inside the client folder as well as the server folder. Once all the dependencies are installed run 'npm start' or 'nodemon' inside the client and server folders. Enjoy the best Milestone2 News site in the history of the world.
 
 
-### **Demo
-
-
-### **Technologies
-
-
-### **Technical Information
-
-
-### **Issues
+### Issues
+  -Currently there is no database connected online.
+  -Posting a new News Article router is not complete
+  -Comments are not working
 
 
 ### Front-End
